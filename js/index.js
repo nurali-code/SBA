@@ -5,14 +5,19 @@ $(function () {
 
     // Инициализация Croppie
     var croppie = new Croppie(document.getElementById('magnifying-glass'), {
-        viewport: { width: 100, height: 100 },
-        boundary: { width: 150, height: 150 },
         enableExif: true,
-        movable: true,
-        zoomable: true, 
-        showZoomer: true,
-        enableZoom: true,
-        showZoomer: true,
+        viewport: {
+            width: 120,
+            height: 120,
+            type: 'circle',
+        },
+        boundary: {
+            width: 200,
+            height: 200,
+        },
+
+        circle: true,
+        showZoomer: false
     });
 
     // Обработчик изменения файла
