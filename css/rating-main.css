@@ -1,0 +1,14 @@
+.rating-body {
+}
+.rating-header {
+    display: flex;
+}
+.container {
+    padding: 0 140px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.rating-header__logo {
+}
+.rating-header__login {
+}
