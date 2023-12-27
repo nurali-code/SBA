@@ -7,10 +7,12 @@ $(function () {
     var croppie = new Croppie(document.getElementById('magnifying-glass'), {
         viewport: { width: 100, height: 100 },
         boundary: { width: 150, height: 150 },
+        enableExif: true,
+        movable: true,
+        zoomable: true, 
         showZoomer: true,
         enableZoom: true,
-        showZoomer: false,
-        // mouseWheelZoom: 'ctrl',
+        showZoomer: true,
     });
 
     // Обработчик изменения файла
