@@ -1212,10 +1212,6 @@ textarea {
     margin-top: 60px;
 }
 
-.reviews-block>div {
-    /* overflow-y: scroll; */
-    height: 100%;
-}
 
 .reviews-block+.reviews-block {
     margin-left: 40px;
@@ -1229,8 +1225,7 @@ textarea {
         23.567px -23.567px 23.567px 0px rgba(165, 165, 165, 0.04) inset;
     backdrop-filter: blur(6.127333164215088px);
     width: 600px;
-    height: 790px;
-    padding: 30px;
+    padding: 30px 30px 197px;
     padding-right: 55px;
     position: relative;
 }
@@ -1975,7 +1970,6 @@ textarea {
 
     .reviews-block {
         width: 501px;
-        height: 656px;
     }
 
     .reviews-block>div>h3 {
@@ -2159,7 +2153,6 @@ textarea {
 
     .reviews-block {
         width: 450px;
-        height: 619px;
     }
 
     .reviews-block>div>h3 {
@@ -3083,7 +3076,7 @@ textarea {
     }
 
     .container-right {
-        padding-left: 20px;
+        padding: 0 20px;
     }
 
     .container-left {
@@ -3215,7 +3208,6 @@ textarea {
 
     .reviews-block {
         width: 325px;
-        height: 580px;
     }
 
     .header-bottomrow-left {
@@ -3263,7 +3255,6 @@ textarea {
 
     .reviews-block {
         width: 340px;
-        height: 610px;
     }
 
     .reviews-blocks {
@@ -3561,7 +3552,6 @@ textarea {
         padding: 10px;
         padding-right: 24px;
         width: 288px;
-        height: 500px;
     }
 
     .advantages-block>p {
