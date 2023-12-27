@@ -3,8 +3,6 @@ $(function () {
         $('.rating-modal').fadeToggle(300);
     });
 
-    var viewportWidth = $(window).width() - 20; // Учитываем отступы
-
     // Инициализация Croppie
     var croppie = new Croppie(document.getElementById('magnifying-glass'), {
         viewport: { width: 100, height: 100 },
@@ -13,7 +11,6 @@ $(function () {
         enableZoom: true,
         showZoomer: false,
         mouseWheelZoom: 'ctrl',
-        enableExif: true, // Включение обработки EXIF для автоматического поворота изображения
     });
 
     // Обработчик изменения файла
@@ -33,21 +30,6 @@ $(function () {
         }
     });
 
-    // Сохранение обрезанного изображения
-    $('#save-btn').on('click', function () {
-        croppie.result('canvas').then(function (result) {
-            // Отправка данных с результатом на сервер или другие действия
-            console.log(result);
-        });
-    });
-
-    // Сохранение обрезанного изображения
-    $('#save-btn').on('click', function () {
-        croppie.result('canvas').then(function (result) {
-            // Отправка данных с результатом на сервер или другие действия
-            console.log(result);
-        });
-    });
     if ($('div').hasClass('scroll') && $(window).width() >= '999') {
         $('.scroll>').getNiceScroll().resize();
         $('.scroll').niceScroll({

@@ -1874,9 +1874,9 @@ textarea {
     background: #525659;
 }
 
-.cr-boundary>img {
+/* .cr-boundary>img {
     max-width: 150px !important;
-}
+} */
 
 .rating-body {
     background-image: url('../img/rating-bg-desk.jpg');
@@ -2555,9 +2555,9 @@ textarea {
         top: 15px;
     }
 
-    .cr-boundary>img {
+    /* .cr-boundary>img {
         max-width: 120px !important;
-    }
+    } */
 
     .rating-section__toprow>div>a {
         position: absolute;
