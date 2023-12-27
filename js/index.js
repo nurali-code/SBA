@@ -2,7 +2,7 @@ $(function () {
     $('.ratingToggle').on('click', function () {
         $('.rating-modal').fadeToggle(300);
     });
-    if($('div').hasClass('scroll')){
+    if($('div').hasClass('scroll') && $(window).width() >= '999'){
         $('.scroll>').getNiceScroll().resize();
         $('.scroll').niceScroll({
             touchbehavior: true,
