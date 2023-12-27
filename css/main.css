@@ -19,7 +19,11 @@ a:visited {
     text-decoration: none;
     cursor: pointer;
 }
-
+.rating-modal-form_photo img {
+    display: block;
+    width: 100%;
+    width: 100%;
+}
 a:hover {
     text-decoration: none;
     cursor: pointer;

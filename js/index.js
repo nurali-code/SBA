@@ -2,7 +2,39 @@ $(function () {
     $('.ratingToggle').on('click', function () {
         $('.rating-modal').fadeToggle(300);
     });
-    if($('div').hasClass('scroll') && $(window).width() >= '999'){
+
+    // Инициализация Croppie
+    var croppie = new Croppie(document.getElementById('magnifying-glass'), {
+        viewport: { width: 100, height: 100 },
+        boundary: { width: 150, height: 150 },
+        showZoomer: false,
+    });
+
+    // Обработчик изменения файла
+    $('#myfile').on('change', function () {
+        var input = this;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                // Установка изображения в Croppie
+                croppie.bind({
+                    url: e.target.result
+                });
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
+
+    // Сохранение обрезанного изображения
+    $('#save-btn').on('click', function () {
+        croppie.result('canvas').then(function (result) {
+            // Отправка данных с результатом на сервер или другие действия
+            console.log(result);
+        });
+    });
+    if ($('div').hasClass('scroll') && $(window).width() >= '999') {
         $('.scroll>').getNiceScroll().resize();
         $('.scroll').niceScroll({
             touchbehavior: true,
@@ -135,5 +167,8 @@ $(function () {
             $(this).find('.programs-block-active').slideDown();
         }
     })
+
+
+
 
 });
