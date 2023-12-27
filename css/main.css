@@ -543,10 +543,6 @@ body {
     scrollbar-width: none;
 }
 
-@media screen and (max-height: ) {
-    
-}
-
 .modal-question__content::-webkit-scrollbar {
     display: none;
     width: 0;
