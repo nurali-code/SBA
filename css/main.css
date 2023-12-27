@@ -539,6 +539,10 @@ body {
     scrollbar-width: none;
 }
 
+@media screen and (max-height: ) {
+    
+}
+
 .modal-question__content::-webkit-scrollbar {
     display: none;
     width: 0;
@@ -3217,10 +3221,10 @@ textarea {
         width: 207px;
     }
 
-    .modal-question__close {
+    /* .modal-question__close {
         top: -70px;
         right: -15px;
-    }
+    } */
 
     .modal-question__close:before,
     .modal-question__close:after {
