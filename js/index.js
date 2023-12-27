@@ -10,7 +10,7 @@ $(function () {
         showZoomer: true,
         enableZoom: true,
         showZoomer: false,
-        mouseWheelZoom: 'ctrl',
+        // mouseWheelZoom: 'ctrl',
     });
 
     // Обработчик изменения файла
