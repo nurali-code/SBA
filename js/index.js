@@ -1,4 +1,16 @@
 $(function () {
+    $('.ratingToggle').on('click', function () {
+        $('.rating-modal').fadeToggle(300);
+    });
+    if($('div').hasClass('scroll')){
+        $('.scroll>').getNiceScroll().resize();
+        $('.scroll').niceScroll({
+            touchbehavior: true,
+            grabcursorenabled: true,
+            emulatetouch: true,
+            touchbehavior: true,
+        });
+    }
     $('#register-phone').inputmask('+9 (999) 999-99-99');
     $('.modal-question__close').on('click', function () {
         $('.modal-question').addClass('off');
@@ -111,13 +123,17 @@ $(function () {
 
     $('.programs-block').on('click', function () {
         $('.programs-block-active').slideUp();
-        $('.programs-button .active, .programs-button').removeClass('active');
-        $(this)
-            .find('.programs-row')
-            .find('.programs-button')
-            .addClass('active');
-        $(this).find('.programs-block-active').slideDown();
+        if ($(this).hasClass('active')) {
+            $('.programs-button, .programs-block').removeClass('active');
+        } else {
+            $('.programs-button, .programs-block').removeClass('active');
+            $(this)
+                .addClass('active')
+                .find('.programs-row')
+                .find('.programs-button')
+                .addClass('active');
+            $(this).find('.programs-block-active').slideDown();
+        }
     })
-
 
 });
