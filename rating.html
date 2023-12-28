@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/fonts.css" />
-    
-    <link rel="stylesheet" href="./css/main.css?ver=66789" />
+
+    <link rel="stylesheet" href="./css/main.css?ver=778910" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
     <title>RATING</title>
 </head>
@@ -14,7 +14,7 @@
 <body class="rating-body">
     <div class="rating-modal off">
         <div class="rating-modal__content">
-            <button class="rating-modal__close ratingToggle">
+            <button class="rating-modal__close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M1 1L25 25M25 1L1 25" stroke="white" stroke-width="2" stroke-linecap="round" />
                 </svg>
@@ -46,13 +46,15 @@
                     </select>
                 </div>
                 <div class="rating-modal-form_photo">
-                    
+
                     <div>
-                        <img id="magnifying-glass" class="my-image" src="./img/stup.jpg" />
+                        <img id="magnifying-glass" class="my-image" src="./img/img.svg" />
                     </div>
                     <div>
                         <label for="myfile" class="rating-input_photo label">Выбрать фото</label>
-                        <input type="file" class="input hidden" id="myfile" name="myfile" multiple />
+                        <input type="file" class="input hidden" id="myfile" name="myfile"
+                            accept=".jpg, .jpeg, .jpe, .jif, .jfif, .jfi, .png, .gif, .webp, .tiff, .tif, .heif, .heic, .svg"
+                            />
                     </div>
                 </div>
 
@@ -62,6 +64,7 @@
             </form>
         </div>
     </div>
+
     <header class="rating-header">
         <div class="header-footer-container">
             <div class="rating-header__wrapper">
@@ -70,6 +73,7 @@
             </div>
         </div>
     </header>
+
     <section class="rating-section">
         <div class="container">
             <h1 class="rating-title">РЕЙТИНГ ЛУЧШИХ ПРОМОУТЕРОВ</h1>
@@ -280,7 +284,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/croppie.min.js"></script>
-    <script src="./js/index.js?ver=66789"></script>
+    <script src="./js/index.js?ver=778910"></script>
 </body>
 
 </html>

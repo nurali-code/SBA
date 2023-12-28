@@ -1,34 +1,34 @@
 $(function () {
     $('.ratingToggle').on('click', function () {
-        $('.rating-modal').fadeToggle(300);
+        $('.rating-modal').fadeIn(300);
+        $('#magnifying-glass').croppie({
+            enableExif: true,
+            viewport: {
+                width: 120,
+                height: 120,
+                type: 'circle',
+            },
+            boundary: {
+                width: 200,
+                height: 200,
+            },
+            circle: true,
+            showZoomer: false
+        });
     });
 
-    // Инициализация Croppie
-    var croppie = new Croppie(document.getElementById('magnifying-glass'), {
-        enableExif: true,
-        viewport: {
-            width: 120,
-            height: 120,
-            type: 'circle',
-        },
-        boundary: {
-            width: 200,
-            height: 200,
-        },
-
-        circle: true,
-        showZoomer: false
+    $('.rating-modal__close').on('click', function () {
+        $('.rating-modal').fadeOut(100);
+        $('#magnifying-glass').croppie('destroy');
     });
 
-    // Обработчик изменения файла
     $('#myfile').on('change', function () {
         var input = this;
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                // Установка изображения в Croppie
-                croppie.bind({
+                $('#magnifying-glass').croppie('bind', {
                     url: e.target.result
                 });
             };
@@ -46,7 +46,6 @@ $(function () {
             touchbehavior: true,
         });
     }
-    $('#register-phone').inputmask('+9 (999) 999-99-99');
     $('.modal-question__close').on('click', function () {
         $('.modal-question').addClass('off');
     });
@@ -170,6 +169,9 @@ $(function () {
             $(this).find('.programs-block-active').slideDown();
         }
     })
+    
+    $('#register-phone').inputmask('+9 (999) 999-99-99');
+
 
 
 

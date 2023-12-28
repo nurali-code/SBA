@@ -21,9 +21,8 @@ a:visited {
 }
 
 .rating-modal-form_photo img {
-    display: block;
     max-width: 100%;
-    width: 100%;
+    height: auto;
 }
 
 #canvas-container {
