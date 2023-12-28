@@ -46,6 +46,16 @@ $(function () {
             touchbehavior: true,
         });
     }
+    var reviewsBlocks = $('.reviews-block');
+    $('#reviews-scroll').scroll(function () {
+        var scrollX = $(this).scrollLeft();
+        reviewsBlocks.each(function () {
+            var reviewsBlock = $(this);
+            var blockOffsetX = reviewsBlock.offset().left;
+            if (blockOffsetX < scrollX + 40) { reviewsBlock.addClass('active'); }
+            else { reviewsBlock.removeClass('active'); }
+        });
+    });
     $('.modal-question__close').on('click', function () {
         $('.modal-question').addClass('off');
     });
@@ -169,7 +179,7 @@ $(function () {
             $(this).find('.programs-block-active').slideDown();
         }
     })
-    
+
     $('#register-phone').inputmask('+9 (999) 999-99-99');
 
 

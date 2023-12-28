@@ -1270,7 +1270,6 @@ textarea {
 .reviews-block {
     border-radius: 10px;
     background: rgba(217, 217, 217, 0.04);
-
     box-shadow: -23.567px 23.567px 23.567px 0px rgba(255, 255, 255, 0.04) inset,
         23.567px -23.567px 23.567px 0px rgba(165, 165, 165, 0.04) inset;
     backdrop-filter: blur(6.127333164215088px);
@@ -1289,6 +1288,11 @@ textarea {
     font-weight: 300;
     line-height: normal;
     margin-bottom: 30px;
+    transition: all .3s ease;
+}
+.reviews-block:first-child>div>h3,
+.reviews-block.active>div>h3 {
+    color: #fec303;
 }
 
 .reviews-block>div>h3>span {
