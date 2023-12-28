@@ -52,7 +52,7 @@ $(function () {
         reviewsBlocks.each(function () {
             var reviewsBlock = $(this);
             var blockOffsetX = reviewsBlock.offset().left;
-            if (blockOffsetX < scrollX + 40) { reviewsBlock.addClass('active'); }
+            if (blockOffsetX < scrollX + 600) { reviewsBlock.addClass('active'); }
             else { reviewsBlock.removeClass('active'); }
         });
     });
